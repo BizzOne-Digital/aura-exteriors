@@ -22,7 +22,7 @@ export default async function FaqPage() {
           mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
         }}
       />
-      <PageHero eyebrow="FAQ" title="Questions, Answered." intro="Everything you need to know about our lighting and exterior services. Can't find your answer? We're happy to help." image={IMG.villaPoolDusk} imageAlt="Illuminated courtyard at dusk" short />
+      <PageHero eyebrow="FAQ" title="Questions, Answered." intro="Everything you need to know about our lighting and exterior services. Can't find your answer? We're happy to help." image={IMG.altCourtyard} imageAlt="Illuminated courtyard at dusk" short />
       <section className="bg-night py-20 md:py-28">
         <Reveal className="container-lux max-w-4xl">
           <FaqAccordion items={faqs} searchable categories />

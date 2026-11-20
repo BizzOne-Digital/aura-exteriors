@@ -23,7 +23,7 @@ export default async function ContactPage() {
   ];
   return (
     <>
-      <PageHero eyebrow="Contact" title="Let's Talk About Your Home." intro="Questions, ideas, or ready to begin? Reach out and our team will be in touch." image={IMG.modernNight} imageAlt="Modern home exterior glowing at night" short />
+      <PageHero eyebrow="Contact" title="Let's Talk About Your Home." intro="Questions, ideas, or ready to begin? Reach out and our team will be in touch." image={IMG.altModernNight} imageAlt="Modern home exterior glowing at night" short />
 
       <section className="relative z-10 -mt-12 bg-transparent">
         <Stagger className="container-lux grid gap-4 md:grid-cols-3">

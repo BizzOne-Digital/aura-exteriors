@@ -17,8 +17,8 @@ const hp = z.string().max(0).optional().or(z.literal(""));
 
 export const SERVICE_OPTIONS = [
   "Low Voltage Permanent Roofline Lighting",
-  "Low Voltage Integrated Landscape Lighting",
-  "Premium Exterior Home Improvements",
+  "Integrated Landscape Lighting",
+  "Exterior Home Improvements",
   "Multiple Services / Not Sure Yet",
 ];
 
@@ -68,3 +68,14 @@ export const loginSchema = z.object({
 });
 
 export const TIME_WINDOWS = ["Morning", "Midday", "Afternoon", "Flexible"];
+
+export const reviewSchema = z.object({
+  name: z.string().trim().min(2, "Please enter your name").max(80),
+  location: z.string().trim().max(80).optional().default(""),
+  email: z.string().trim().toLowerCase().email("Please enter a valid email address").max(200),
+  rating: z.number().int().min(1, "Please choose a rating").max(5),
+  quote: z.string().trim().min(15, "Please share a little more about your experience (15+ characters)").max(2000),
+  consent: z.literal(true, { error: "Please confirm we may publish your review" }),
+  website: hp,
+});
+export type ReviewInput = z.input<typeof reviewSchema>;

@@ -260,3 +260,16 @@
     transform: scale(1);
   }
 }
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+.twinkle {
+  animation: twinkle 2.6s ease-in-out infinite;
+}

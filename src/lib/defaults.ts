@@ -21,7 +21,7 @@ export const defaultSettings = {
     "Luxury outdoor lighting and exterior enhancements designed to elevate the beauty, safety, and functionality of your home.",
   seoTitle: "Aura Exteriors | Luxury Outdoor Lighting & Exterior Enhancements",
   seoDescription:
-    "Permanent roofline lighting, integrated landscape lighting, and premium exterior home improvements. Nearly 40 years of experience. Request a free consultation.",
+    "Permanent roofline lighting, integrated landscape lighting, gutter guards, high window cleaning, and exterior washing. Nearly 40 years of experience. Request a free consultation.",
   ogImage: IMG.heroDusk,
   notifyEmail: "",
   sendCustomerConfirmations: true,
@@ -78,6 +78,38 @@ export const defaultHome = {
     heading: "Our Services",
     description: "Premium lighting and exterior solutions that bring lasting beauty and value to your home.",
   },
+  ladder: {
+    label: "Safer. Easier. Done For You.",
+    heading: "Never Climb a Ladder Again.",
+    text: "Our services take the riskiest, most tiring exterior chores off your list for good. No more hanging Christmas lights, cleaning out gutters, or balancing on a ladder to wash high windows.",
+    items: [
+      { title: "Christmas Lights, Without the Ladder", text: "Permanent lights stay up all year and switch to holiday colors with a tap. Nothing to hang, nothing to take down.", image: IMG.cardRoofline, link: "/services/roofline-lighting" },
+      { title: "Protected Gutters", text: "Gutter guard installation keeps leaves and debris out, so you can stop climbing up to clean them.", image: IMG.cardExterior, link: "/services/exterior-improvements" },
+      { title: "Clean, High Windows", text: "Professional high window cleaning for sparkling glass on every floor, without the risk.", image: IMG.altModernNight, link: "/services/exterior-improvements" },
+    ],
+  },
+  occasions: {
+    label: "Every Color. Every Occasion.",
+    heading: "Lights for Every Holiday, Game Day, and Celebration.",
+    text: "Your permanent lights aren't just for Christmas. With millions of color combinations and patterns controlled from an app on your phone, your home can celebrate every season, cheer on your team, and mark life's special moments, then return to elegant warm white every evening.",
+    smartHeading: "Smart, Simple Control",
+    smartPoints: [
+      "Millions of color combinations and patterns",
+      "Control everything from an app on your phone",
+      "Schedules and timers that run automatically",
+      "Works with smart home controls like Amazon Alexa and Google Assistant",
+    ],
+    items: [
+      { title: "Christmas", text: "Classic red, green, and white, or twinkling patterns that bring the season to life.", colors: "#e0313a,#2fa84f,#ffffff", image: "" },
+      { title: "Halloween", text: "Spooky orange and purple glow for trick-or-treat night.", colors: "#ff7a1a,#8e3df0", image: "" },
+      { title: "Fourth of July", text: "Red, white, and blue to celebrate Independence Day.", colors: "#e0313a,#ffffff,#2f5bea", image: "" },
+      { title: "Game Day", text: "Show your team spirit with your favorite team's colors for every big game.", colors: "#1d4ed8,#f5b301", image: "" },
+      { title: "Valentine's Day", text: "Soft pinks and reds for a romantic evening.", colors: "#ff5fa2,#e0313a,#ffd1e3", image: "" },
+      { title: "St. Patrick's Day", text: "Every shade of green for a festive celebration.", colors: "#2fa84f,#7be08f,#0f7a33", image: "" },
+      { title: "Birthdays & Celebrations", text: "Custom colors for birthdays, anniversaries, graduations, and gender reveals.", colors: "#ff4d4d,#ffb020,#3ddc84,#3d8bff,#b04dff", image: "" },
+      { title: "Everyday Elegance", text: "Warm white architectural lighting that makes your home glow every night.", colors: "#ffd9a0,#fff1d6", image: "" },
+    ],
+  },
   about: {
     label: "The Aura Difference",
     heading: "Crafting Extraordinary Exteriors for Nearly Four Decades.",
@@ -98,7 +130,7 @@ export const defaultHome = {
   transform: {
     heading: "Your Home Deserves to Shine.",
     text: "Discover how expertly designed outdoor lighting can transform the character of your property.",
-    image: IMG.modernDusk,
+    image: IMG.altModernDusk,
     button: "Explore Our Services",
   },
   process: {
@@ -142,7 +174,7 @@ export const defaultAbout = {
     label: "Our Philosophy",
     heading: "Light should feel like it has always belonged to the home.",
     body: "We believe great exterior lighting is felt before it is noticed. Rather than flooding a property with brightness, we use light to reveal texture, guide movement, and frame the architecture you love, creating a home that feels warm, welcoming, and secure every evening.",
-    image: IMG.stonePatioDusk,
+    image: IMG.altPatio,
   },
   commitments: {
     heading: "Our Commitment",
@@ -162,7 +194,7 @@ export const defaultAbout = {
       "Clear communication from consultation through final walkthrough",
       "Financing options available through Hearth",
     ],
-    image: IMG.villaPoolDusk,
+    image: IMG.altCourtyard,
   },
 };
 export type AboutContent = typeof defaultAbout;
@@ -172,7 +204,7 @@ export const defaultServicesPage = {
     label: "Our Services",
     heading: "Exceptional Outdoor Lighting. Extraordinary First Impressions.",
     intro:
-      "From permanent roofline lighting to integrated landscape lighting and premium exterior improvements, every Aura Exteriors service is designed to elevate how your home looks, feels, and functions after dark.",
+      "From permanent roofline lighting to integrated landscape lighting and exterior home improvements, every Aura Exteriors service is designed to elevate how your home looks, feels, and functions after dark.",
     image: IMG.modernDusk,
   },
 };
@@ -184,7 +216,7 @@ export const defaultPricing = {
     heading: "Your Home Is Unique. Your Investment Should Be Too.",
     intro:
       "Every property is different, so we don't offer one-size-fits-all pricing. Your personalized quote reflects your property's requirements, your design preferences, the project scope, selected materials, and installation details.",
-    image: IMG.villaPoolDusk,
+    image: IMG.altCourtyard,
   },
   factors: ["Property requirements", "Design preferences", "Project scope", "Materials and fixtures", "Installation details"],
   steps: [
@@ -210,25 +242,26 @@ export const defaultServices = [
     slug: "roofline-lighting",
     title: "Low Voltage Permanent Roofline Lighting",
     shortTitle: "Roofline Lighting",
-    summary: "Permanent, low voltage lighting that traces your roofline and highlights your home's architecture every night of the year.",
+    summary: "Permanent, app-controlled multicolor lights for every holiday, game day, and special occasion, so you never have to climb a ladder to hang Christmas lights again.",
     description:
-      "Permanent roofline lighting outlines the eaves, peaks, and gables of your home with discreet low voltage fixtures. Designed to blend into your architecture during the day and showcase it at night, a permanent system enhances curb appeal and creates a warm, welcoming presence, without the hassle of putting up and taking down seasonal lights.",
+      "Permanent roofline lighting outlines the eaves, peaks, and gables of your home with discreet low voltage fixtures that stay up all year. Choose from millions of color combinations and patterns right from an app on your phone: warm white for everyday elegance, red and green for Christmas, orange and purple for Halloween, red, white, and blue for the Fourth of July, or your favorite team's colors on game day. The system can also be integrated with smart home controls like Amazon Alexa and Google Assistant.",
     benefits: [
-      "Highlights rooflines, peaks, and architectural details",
-      "Discreet low voltage fixtures that blend in by day",
-      "Elegant nighttime presence and enhanced curb appeal",
-      "Suitable for everyday accent lighting and decorative applications",
-      "Eliminates repeated ladder work for seasonal decorating",
+      "Never get on a ladder to hang Christmas lights again",
+      "Millions of color combinations and patterns",
+      "App controlled from your phone, anytime, anywhere",
+      "Works with smart home controls like Alexa and Google Assistant",
+      "Ready for every holiday, sporting event, and special occasion",
+      "Discreet fixtures that blend into your roofline by day",
     ],
     details:
-      "Each roofline system is planned around the lines and proportions of your home. We consider fixture placement, spacing, and light color so the result looks intentional, balanced, and refined.",
+      "Use your lights all year round: classic warm white every evening, festive patterns for Christmas, Halloween, Valentine's Day, St. Patrick's Day, and the Fourth of July, team colors for game day, and custom colors for birthdays, anniversaries, graduations, and celebrations. Each system is planned around the lines and proportions of your home so it looks clean and intentional, day and night.",
     cardImage: IMG.cardRoofline,
     heroImage: IMG.heroDusk,
     order: 0,
   },
   {
     slug: "landscape-lighting",
-    title: "Low Voltage Integrated Landscape Lighting",
+    title: "Integrated Landscape Lighting",
     shortTitle: "Landscape Lighting",
     summary: "Pathway, tree, garden, and architectural uplighting that brings your outdoor spaces to life after dark.",
     description:
@@ -248,19 +281,21 @@ export const defaultServices = [
   },
   {
     slug: "exterior-improvements",
-    title: "Premium Exterior Home Improvements",
+    title: "Exterior Home Improvements",
     shortTitle: "Exterior Improvements",
-    summary: "Thoughtful exterior enhancements that elevate the beauty, function, and value of your home.",
+    summary: "High window cleaning, gutter guard installation, and house, driveway, and walkway washing, so you never have to get on a ladder again.",
     description:
-      "Beyond lighting, Aura Exteriors offers premium exterior home improvements designed to complement your property and elevate its overall appearance. Every project is approached with the same attention to design, quality, and craftsmanship that defines our lighting work. Contact us to discuss the improvements you have in mind.",
+      "Keep your home looking its best without the risk and hassle of doing it yourself. Aura Exteriors handles the high, hard-to-reach, and time-consuming exterior work: sparkling clean windows, protected gutters, and freshly washed siding, driveways, and walkways. Every job is completed with the same care and attention to detail that defines our lighting work.",
     benefits: [
-      "Enhances curb appeal and first impressions",
-      "Designed to complement your home's architecture",
-      "Premium materials and careful workmanship",
-      "Coordinated with your outdoor lighting plan",
+      "High window cleaning",
+      "Gutter guard installation",
+      "House washing",
+      "Driveway washing",
+      "Walkway washing",
+      "No more climbing ladders for clean windows or clogged gutters",
     ],
     details:
-      "Because every home and every goal is different, we begin each exterior improvement project with a consultation to understand what you'd like to achieve and recommend the right approach.",
+      "Protected gutters, clean windows, and a freshly washed exterior instantly improve curb appeal and help protect your home. Combine exterior services with permanent lighting for a home that looks its best day and night. Contact us for a personalized quote.",
     cardImage: IMG.cardExterior,
     heroImage: IMG.stonePatioDusk,
     order: 2,
@@ -271,7 +306,7 @@ export type ServiceData = (typeof defaultServices)[number] & { _id?: string };
 export const FAQ_CATEGORIES = ["General", "Roofline Lighting", "Landscape Lighting", "Exterior Improvements", "Financing", "Booking"];
 
 export const defaultFaqs = [
-  { question: "What is low voltage roofline lighting?", answer: "Low voltage roofline lighting is a permanent lighting system installed along the eaves, peaks, and edges of your roof. It uses low voltage fixtures to outline and highlight your home's architecture at night, and is designed to remain in place year-round rather than being installed and removed seasonally.", category: "Roofline Lighting", featured: true },
+  { question: "What is permanent roofline lighting?", answer: "Permanent roofline lighting is a low voltage lighting system installed along the eaves, peaks, and edges of your roof. It stays up year-round, so you never have to hang or take down holiday lights again, and it can display millions of colors and patterns controlled from an app.", category: "Roofline Lighting", featured: true },
   { question: "What are the benefits of landscape lighting?", answer: "Landscape lighting enhances the beauty of your property after dark, highlights trees, gardens, and architectural features, improves visibility along walkways and entrances, and lets you enjoy your outdoor spaces longer into the evening.", category: "Landscape Lighting", featured: true },
   { question: "Do you offer customized lighting solutions?", answer: "Yes. Every property is different, so each lighting plan is designed around your home's architecture, landscape, and goals. We discuss your preferences during your consultation and plan accordingly.", category: "General", featured: true },
   { question: "How can I request an estimate?", answer: "You can request a personalized quote through our Pricing page, submit the contact form, request a consultation online, or call us directly. Because every project is unique, pricing is based on your property's requirements, design preferences, scope, materials, and installation details.", category: "General", featured: true },
@@ -279,7 +314,11 @@ export const defaultFaqs = [
   { question: "How do I schedule a consultation?", answer: "Use our online booking page to request a consultation, call us, or send a message through the contact form. We'll follow up to confirm the details.", category: "Booking", featured: true },
   { question: "Will roofline lights be visible during the day?", answer: "Permanent roofline systems are designed to be discreet. Fixture placement and mounting are planned to blend with your home's trim and roofline as much as possible. We can discuss how this applies to your home during your consultation.", category: "Roofline Lighting", featured: false },
   { question: "Can landscape lighting be designed around my existing garden?", answer: "Yes. Integrated landscape lighting is planned around your existing trees, plantings, pathways, and hardscape to highlight what you already love about your property.", category: "Landscape Lighting", featured: false },
-  { question: "What kinds of exterior improvements do you offer?", answer: "We offer premium exterior home improvements tailored to each property. Because every project is different, the best next step is a consultation where we can discuss the specific improvements you have in mind.", category: "Exterior Improvements", featured: false },
+  { question: "What kinds of exterior improvements do you offer?", answer: "We offer high window cleaning, gutter guard installation, and house, driveway, and walkway washing. Contact us for a personalized quote for your home.", category: "Exterior Improvements", featured: false },
+  { question: "Can I change the colors of my permanent lights?", answer: "Yes. Your permanent lights are app controlled, with millions of color combinations and patterns. Switch to warm white for everyday, festive colors for holidays, your team's colors on game day, or custom colors for birthdays and special occasions, all from your phone.", category: "Roofline Lighting", featured: true },
+  { question: "Do the lights work with Alexa or Google Assistant?", answer: "Yes. The lighting system can be integrated with smart home controls like Amazon Alexa and Google Assistant, so you can turn lights on, off, or change scenes with your voice.", category: "Roofline Lighting", featured: false },
+  { question: "Can I use my lights all year, not just at Christmas?", answer: "Absolutely. Permanent lights stay up year-round and can be used for every holiday, sporting events, and special occasions like birthdays, anniversaries, and graduations, plus elegant warm white lighting every evening.", category: "Roofline Lighting", featured: false },
+  { question: "Will I ever need to climb a ladder again?", answer: "That's the goal. With permanent holiday lights, gutter guards, and professional high window cleaning, the ladder work is handled for you.", category: "General", featured: false },
   { question: "Do I need to create an account to request a quote?", answer: "No. You can request a quote or consultation without creating an account. Simply fill out the form with your contact details and project information.", category: "General", featured: false },
 ];
 
@@ -287,10 +326,10 @@ export const defaultGallery = [
   { image: IMG.heroDusk, alt: "Stone home with warm permanent roofline lighting at dusk", caption: "Roofline Lighting", category: "roofline-lighting" },
   { image: IMG.villaPoolDusk, alt: "Landscaped front yard with pathway and garden lighting at twilight", caption: "Landscape Lighting", category: "landscape-lighting" },
   { image: IMG.mansionDusk, alt: "Illuminated stone facade and entrance at night", caption: "Architectural Lighting", category: "exterior-improvements" },
-  { image: IMG.cardRoofline, alt: "Gabled roofline outlined with warm lights", caption: "Roofline Detail", category: "roofline-lighting" },
+  { image: IMG.altModernNight, alt: "Modern home exterior with warm accent lighting at night", caption: "Modern Exterior", category: "exterior-improvements" },
   { image: IMG.stonePatioDusk, alt: "Curved stone walkway with path lights leading to the entrance", caption: "Illuminated Entrance", category: "exterior-improvements" },
-  { image: IMG.cardLandscape, alt: "Garden beds and walkway glowing with low voltage lighting", caption: "Garden Pathways", category: "landscape-lighting" },
+  { image: IMG.altCourtyard, alt: "Courtyard and pool glowing with landscape lighting at dusk", caption: "Courtyard Lighting", category: "landscape-lighting" },
   { image: IMG.modernDusk, alt: "Luxury residence with roofline and landscape lighting at dusk", caption: "Residential Exterior", category: "roofline-lighting" },
-  { image: IMG.cardExterior, alt: "Stone exterior with warm accent lighting and landscaping", caption: "Exterior Enhancements", category: "exterior-improvements" },
-  { image: IMG.modernNight, alt: "Home with trees and gardens illuminated at night", caption: "Tree Illumination", category: "landscape-lighting" },
+  { image: IMG.altTree, alt: "Tree glowing with warm illumination at night", caption: "Tree Illumination", category: "landscape-lighting" },
+  { image: IMG.altPatio, alt: "Stone patio and outdoor living area at sunset", caption: "Outdoor Living", category: "exterior-improvements" },
 ];

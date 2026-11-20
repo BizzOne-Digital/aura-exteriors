@@ -7,7 +7,8 @@ import { PageHero, SectionHeading, ServiceCard, JsonLd } from "@/components/shar
 import { Reveal, Stagger, StaggerItem } from "@/components/shared/motion";
 import { GalleryGrid } from "@/components/shared/GalleryGrid";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
-import { getFaqs, getGallery, getService, getServices, getSettings } from "@/lib/data";
+import { getFaqs, getGallery, getPage, getService, getServices, getSettings } from "@/lib/data";
+import { Occasions } from "@/components/home/Occasions";
 import { SERVICE_SLUGS } from "@/lib/defaults";
 import { siteUrl, telHref } from "@/lib/utils";
 
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const [service, all, faqs, gallery, settings] = await Promise.all([getService(slug), getServices(), getFaqs(), getGallery(), getSettings()]);
+  const [service, all, faqs, gallery, settings, home] = await Promise.all([getService(slug), getServices(), getFaqs(), getGallery(), getSettings(), getPage("home")]);
   if (!service) notFound();
   const related = all.filter((s) => s.slug !== slug);
   const serviceFaqs = faqs.filter((f) => f.category === FAQ_CATEGORY[slug] || f.category === "General").slice(0, 6);
@@ -69,7 +70,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
           </Reveal>
           <Reveal direction="right">
             <div className="card-lux p-8 md:p-10">
-              <h3 className="font-serif text-3xl text-ivory">Key Benefits</h3>
+              <h3 className="font-serif text-3xl text-ivory">{slug === "exterior-improvements" ? "Services We Offer" : "Key Benefits"}</h3>
               <Stagger as="ul" className="mt-6 space-y-4">
                 {service.benefits.map((b) => (
                   <StaggerItem as="li" key={b} className="flex items-start gap-3 text-ivory/90">
@@ -84,6 +85,8 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
           </Reveal>
         </div>
       </section>
+
+      {slug === "roofline-lighting" && <Occasions data={home.occasions} />}
 
       {shownImages.length > 0 && (
         <section className="bg-midnight py-24">

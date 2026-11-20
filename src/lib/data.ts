@@ -133,12 +133,12 @@ export const getGallery = cached(
   "gallery",
 );
 
-export type TestimonialItem = { _id: string; name: string; location: string; quote: string; image: string };
+export type TestimonialItem = { _id: string; name: string; location: string; quote: string; image: string; rating: number; createdAt?: string };
 export const getTestimonials = cached(
   (): Promise<TestimonialItem[]> =>
     safe([] as TestimonialItem[], async () => {
-      const docs = await Testimonial.find({ approved: true }, { name: 1, location: 1, quote: 1, image: 1 }).sort({ order: 1 }).lean();
-      return docs.map((d) => ({ ...d, _id: String(d._id) })) as unknown as TestimonialItem[];
+      const docs = await Testimonial.find({ approved: true }, { name: 1, location: 1, quote: 1, image: 1, rating: 1, createdAt: 1 }).sort({ order: 1 }).lean();
+      return docs.map((d) => ({ ...d, _id: String(d._id), rating: d.rating ?? 5, createdAt: d.createdAt ? new Date(d.createdAt).toISOString() : undefined })) as unknown as TestimonialItem[];
     }),
   "testimonials",
 );

@@ -156,6 +156,9 @@ const TestimonialSchema = new Schema(
     name: { type: String, required: true, maxlength: 120 },
     location: { type: String, default: "", maxlength: 120 },
     quote: { type: String, required: true, maxlength: 2000 },
+    rating: { type: Number, min: 1, max: 5, default: 5 },
+    email: { type: String, default: "", maxlength: 200 }, // private: never shown publicly
+    source: { type: String, enum: ["admin", "website"], default: "admin" },
     image: { type: String, default: "" },
     approved: { type: Boolean, default: false },
     order: { type: Number, default: 0 },

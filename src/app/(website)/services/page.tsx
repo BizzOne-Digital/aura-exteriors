@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Low voltage permanent roofline lighting, integrated landscape lighting, and premium exterior home improvements by Aura Exteriors.",
+  description: "Low voltage permanent roofline lighting, integrated landscape lighting, and exterior home improvements (window cleaning, gutter guards, and washing) by Aura Exteriors.",
   alternates: { canonical: "/services" },
 };
 
@@ -54,7 +54,7 @@ export default async function ServicesPage() {
                 <span className="gold-rule mt-6" />
                 <p className="mt-6 leading-[1.85] text-muted">{s.description}</p>
                 <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {s.benefits.slice(0, 4).map((b) => (
+                  {s.benefits.slice(0, 6).map((b) => (
                     <li key={b} className="flex items-start gap-3 text-[0.95rem] text-ivory/90">
                       <Check className="mt-1 h-4 w-4 shrink-0 text-gold" /> {b}
                     </li>

@@ -45,7 +45,7 @@ const GROUPS = [
       { href: "/admin/services", label: "Services", icon: Sparkles },
       { href: "/admin/gallery", label: "Gallery", icon: Images },
       { href: "/admin/faq", label: "FAQ", icon: CircleHelp },
-      { href: "/admin/testimonials", label: "Testimonials", icon: MessageSquareQuote },
+      { href: "/admin/testimonials", label: "Reviews", icon: MessageSquareQuote },
       { href: "/admin/financing", label: "Financing", icon: Landmark },
       { href: "/admin/suppliers", label: "Supplier Links", icon: Link2 },
       { href: "/admin/settings", label: "Settings", icon: Settings },

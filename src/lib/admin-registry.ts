@@ -84,6 +84,7 @@ export const COLLECTIONS: Record<string, CollectionConfig> = {
       name: text(120).min(2),
       location: text(120),
       quote: text(2000).min(5),
+      rating: z.coerce.number().int().min(1).max(5),
       image: imageUrl,
       approved: z.boolean(),
     }),

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Compass, Gem, Hammer, Sparkles } from "lucide-react";
 import { Hero } from "@/components/home/Hero";
 import { Process } from "@/components/home/Process";
+import { NeverLadder, Occasions } from "@/components/home/Occasions";
 import { Reveal, MaskReveal, Stagger, StaggerItem } from "@/components/shared/motion";
 import { SectionHeading, ServiceCard, ImageCta, JsonLd } from "@/components/shared/sections";
 import { FinancingBanner, FinancingCallout } from "@/components/shared/Financing";
@@ -65,6 +66,9 @@ export default async function HomePage() {
       <div className="bg-night pb-20 md:pb-28">
         <FinancingBanner f={financing} />
       </div>
+
+      <NeverLadder data={home.ladder} />
+      <Occasions data={home.occasions} />
 
       {/* About */}
       <section className="relative overflow-hidden bg-midnight py-24 md:py-32">
