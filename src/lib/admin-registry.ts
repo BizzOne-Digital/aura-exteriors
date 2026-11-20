@@ -24,7 +24,7 @@ export const imageUrl = z
   .trim()
   .max(1000)
   .refine(
-    (v) => v === "" || v.startsWith("/api/uploads/") || /^https:\/\//.test(v) || /^\/[A-Za-z0-9._-]+\.(webp|png|jpe?g|gif|svg|avif)$/i.test(v),
+    (v) => v === "" || v.startsWith("/api/uploads/") || /^https:\/\//.test(v) || /^\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9._-]+\.(webp|png|jpe?g|gif|svg|avif)$/i.test(v),
     "Must be an uploaded image, a site image, or https URL",
   );
 const httpUrl = z
