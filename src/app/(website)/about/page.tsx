@@ -8,7 +8,7 @@ import { getPage, getSettings } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Nearly 40 years of outdoor and landscape lighting experience. Learn about Aura Exteriors' commitment to thoughtful design, premium products, and expert installation.",
+  description: "Experience spanning four decades in outdoor and landscape lighting. Learn about Aura Exteriors' commitment to thoughtful design, premium products, and expert installation.",
   alternates: { canonical: "/about" },
 };
 

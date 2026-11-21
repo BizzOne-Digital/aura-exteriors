@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export function LaurelBadge({ value = "40", label = "YEARS", ...props }: SVGProps<SVGSVGElement> & { value?: string; label?: string }) {
+export function LaurelBadge({ value = "4", label = "DECADES", ...props }: SVGProps<SVGSVGElement> & { value?: string; label?: string }) {
   const leaves = Array.from({ length: 6 });
   return (
     <svg viewBox="0 0 100 64" fill="none" aria-hidden="true" {...props}>
@@ -18,7 +18,7 @@ export function LaurelBadge({ value = "40", label = "YEARS", ...props }: SVGProp
       <text x="50" y="36" textAnchor="middle" fill="#F8F7F3" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontSize: 30, fontWeight: 600 }}>
         {value}
       </text>
-      <text x="50" y="50" textAnchor="middle" fill="#F8F7F3" style={{ fontFamily: "var(--font-manrope), sans-serif", fontSize: 7.5, letterSpacing: "0.18em", fontWeight: 600 }}>
+      <text x="50" y="50" textAnchor="middle" fill="#F8F7F3" style={{ fontFamily: "var(--font-manrope), sans-serif", fontSize: 6.5, letterSpacing: "0.14em", fontWeight: 600 }}>
         {label}
       </text>
     </svg>

@@ -4,7 +4,7 @@ export const SERVICE_SLUGS = ["roofline-lighting", "landscape-lighting", "exteri
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
 export const COMPANY_DESCRIPTION =
-  "With nearly 40 years of industry experience, Aura Exteriors has established itself as a trusted leader in outdoor and landscape lighting solutions. We are dedicated to enhancing the beauty, safety, functionality, and curb appeal of every home through thoughtful design, premium products, and expert installation. Our commitment to quality craftsmanship and meticulous attention to detail sets us apart in the industry.";
+  "With experience spanning four decades, Aura Exteriors has established itself as a trusted leader in outdoor and landscape lighting solutions. We are dedicated to enhancing the beauty, safety, functionality, and curb appeal of every home through thoughtful design, premium products, and expert installation. Our commitment to quality craftsmanship and meticulous attention to detail sets us apart in the industry.";
 
 export const defaultSettings = {
   siteName: "Aura Exteriors",
@@ -21,7 +21,7 @@ export const defaultSettings = {
     "Luxury outdoor lighting and exterior enhancements designed to elevate the beauty, safety, and functionality of your home.",
   seoTitle: "Aura Exteriors | Luxury Outdoor Lighting & Exterior Enhancements",
   seoDescription:
-    "Permanent roofline lighting, integrated landscape lighting, gutter guards, high window cleaning, and exterior washing. Nearly 40 years of experience. Request a free consultation.",
+    "Permanent roofline lighting, integrated landscape lighting, gutter guards, high window cleaning, and exterior washing. Experience spanning four decades. Request a free consultation.",
   ogImage: IMG.heroDusk,
   notifyEmail: "",
   sendCustomerConfirmations: true,
@@ -69,7 +69,7 @@ export const defaultHome = {
     secondaryCta: "Book Online",
   },
   trust: [
-    { title: "Nearly 40 Years", subtitle: "of Experience" },
+    { title: "Experience Spanning", subtitle: "Four Decades" },
     { title: "Premium", subtitle: "Products" },
     { title: "Expert", subtitle: "Installation" },
     { title: "Trusted &", subtitle: "Reliable" },
@@ -83,9 +83,9 @@ export const defaultHome = {
     heading: "Never Climb a Ladder Again.",
     text: "Our services take the riskiest, most tiring exterior chores off your list for good. No more hanging Christmas lights, cleaning out gutters, or balancing on a ladder to wash high windows.",
     items: [
-      { title: "Christmas Lights, Without the Ladder", text: "Permanent lights stay up all year and switch to holiday colors with a tap. Nothing to hang, nothing to take down.", image: IMG.cardRoofline, link: "/services/roofline-lighting" },
-      { title: "Protected Gutters", text: "Gutter guard installation keeps leaves and debris out, so you can stop climbing up to clean them.", image: IMG.cardExterior, link: "/services/exterior-improvements" },
-      { title: "Clean, High Windows", text: "Professional high window cleaning for sparkling glass on every floor, without the risk.", image: IMG.altModernNight, link: "/services/exterior-improvements" },
+      { title: "Christmas Lights, Without the Ladder", text: "Permanent lights stay up all year and switch to holiday colors with a tap. Nothing to hang, nothing to take down.", image: "/occasions/christmas-night.webp", link: "/services/roofline-lighting" },
+      { title: "Protected Gutters", text: "Gutter guard installation keeps leaves and debris out, so you can stop climbing up to clean them.", image: "/ladder/gutter-guards.webp", link: "/services/exterior-improvements" },
+      { title: "Clean, High Windows", text: "Professional high window cleaning for sparkling glass on every floor, without the risk.", image: "/ladder/high-windows.webp", link: "/services/exterior-improvements" },
     ],
   },
   occasions: {
@@ -121,7 +121,7 @@ export const defaultHome = {
     label: "Why Aura",
     heading: "Thoughtfully Designed. Expertly Installed.",
     items: [
-      { title: "Decades of Industry Experience", text: "Nearly 40 years of hands-on expertise in outdoor and landscape lighting." },
+      { title: "Decades of Industry Experience", text: "Hands-on expertise in outdoor and landscape lighting, spanning four decades." },
       { title: "Thoughtful Lighting Design", text: "Every plan is shaped around your home's architecture, landscape, and the way you live outdoors." },
       { title: "Premium Product Selection", text: "Quality low voltage fixtures and materials chosen for lasting beauty and performance." },
       { title: "Meticulous Craftsmanship", text: "Careful, detail-focused installation that respects your home and property." },
@@ -161,7 +161,7 @@ export type HomeContent = typeof defaultHome;
 export const defaultAbout = {
   hero: {
     label: "About Aura Exteriors",
-    heading: "Nearly 40 Years of Experience. One Commitment to Excellence.",
+    heading: "Experience Spanning Four Decades. One Commitment to Excellence.",
     image: IMG.mansionDusk,
   },
   story: {
@@ -188,7 +188,7 @@ export const defaultAbout = {
   reasons: {
     heading: "Why Homeowners Choose Aura Exteriors",
     items: [
-      "Nearly 40 years of outdoor and landscape lighting experience",
+      "Experience spanning four decades in outdoor and landscape lighting",
       "Lighting designed around your property, not a one-size-fits-all package",
       "Premium products and meticulous installation",
       "Clear communication from consultation through final walkthrough",
@@ -297,7 +297,7 @@ export const defaultServices = [
     details:
       "Protected gutters, clean windows, and a freshly washed exterior instantly improve curb appeal and help protect your home. Combine exterior services with permanent lighting for a home that looks its best day and night. Contact us for a personalized quote.",
     cardImage: IMG.cardExterior,
-    heroImage: IMG.stonePatioDusk,
+    heroImage: "/service-exterior-hero.webp",
     order: 2,
   },
 ];
@@ -333,6 +333,7 @@ export const defaultGallery = [
   { image: IMG.altTree, alt: "Garden pathway lined with path lights and uplit trees", caption: "Garden Pathway", category: "landscape-lighting" },
   { image: IMG.rooflineGable, alt: "Stone gables outlined with permanent roofline lights", caption: "Permanent Roofline Lights", category: "roofline-lighting" },
   { image: IMG.estateFountain, alt: "Estate home with fountain, uplit trees and driveway lighting", caption: "Estate Lighting", category: "landscape-lighting" },
+  { image: "/gallery/landscape-walkway.webp", alt: "Home with roofline lights, uplit trees and a lit curved walkway at dusk", caption: "Landscape Walkway", category: "landscape-lighting" },
   { image: IMG.altGarden, alt: "Stone entry with lantern sconces and lit steps", caption: "Entry Lighting", category: "exterior-improvements" },
   { image: IMG.altModernDusk, alt: "Contemporary home with soffit, step and landscape lighting", caption: "Contemporary Home", category: "roofline-lighting" },
   { image: IMG.altPatio, alt: "Outdoor living area with fire pit and lit steps at sunset", caption: "Outdoor Living", category: "exterior-improvements" },
