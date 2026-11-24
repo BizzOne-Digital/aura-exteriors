@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { CalendarDays, Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/shared/Logo";
 import { FacebookIcon, InstagramIcon } from "@/components/shared/Icons";
 import { telHref, isSafeExternalUrl } from "@/lib/utils";
@@ -103,6 +103,11 @@ export function Footer({
                   <Mail className="h-4 w-4 shrink-0 text-gold" /> {settings.email}
                 </a>
               </li>
+              {settings.serviceArea && (
+                <li className="flex items-start gap-3 text-ivory/90">
+                  <MapPin className="mt-1 h-4 w-4 shrink-0 text-gold" /> {settings.serviceArea}
+                </li>
+              )}
             </ul>
             <Link href="/booking" className="btn btn-gold mt-7">
               <CalendarDays className="h-4 w-4" /> Book a Consultation

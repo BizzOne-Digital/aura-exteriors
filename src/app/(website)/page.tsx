@@ -3,14 +3,14 @@ import Link from "next/link";
 import { ArrowRight, Compass, Gem, Hammer, Sparkles } from "lucide-react";
 import { Hero } from "@/components/home/Hero";
 import { Process } from "@/components/home/Process";
+import { Certifications } from "@/components/home/Certifications";
 import { NeverLadder, Occasions } from "@/components/home/Occasions";
 import { Reveal, MaskReveal, Stagger, StaggerItem } from "@/components/shared/motion";
-import { SectionHeading, ServiceCard, ImageCta, JsonLd } from "@/components/shared/sections";
+import { SectionHeading, ServiceCard, ImageCta } from "@/components/shared/sections";
 import { FinancingBanner, FinancingCallout } from "@/components/shared/Financing";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { GalleryGrid } from "@/components/shared/GalleryGrid";
 import { getFaqs, getFinancing, getGallery, getPage, getServices, getSettings, getTestimonials } from "@/lib/data";
-import { siteUrl } from "@/lib/utils";
 
 const WHY_ICONS = [Compass, Sparkles, Gem, Hammer];
 
@@ -28,18 +28,6 @@ export default async function HomePage() {
 
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "HomeAndConstructionBusiness",
-          name: settings.siteName,
-          url: siteUrl(),
-          telephone: settings.phone,
-          email: settings.email,
-          description: settings.seoDescription,
-          ...(settings.address ? { address: settings.address } : {}),
-        }}
-      />
       <Hero hero={home.hero} trust={home.trust} />
 
       {/* Our Services */}
@@ -78,9 +66,9 @@ export default async function HomePage() {
               <Image src={home.about.image} alt="Luxury residence with warm architectural lighting at twilight" fill sizes="(max-width:1024px) 100vw, 50vw" className="night-grade object-cover" />
             </MaskReveal>
             <Reveal delay={0.6} className="absolute -bottom-8 right-4 rounded-[10px] border border-line bg-night/90 px-7 py-6 backdrop-blur-md sm:-right-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Nearly</p>
-              <p className="font-serif text-6xl leading-none text-champagne">40</p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted">Years of Experience</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Experience Spanning</p>
+              <p className="font-serif text-6xl leading-none text-champagne">Four</p>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted">Decades</p>
             </Reveal>
             <span aria-hidden="true" className="absolute -left-4 -top-4 h-28 w-28 border-l border-t border-gold/60" />
           </div>
@@ -95,6 +83,8 @@ export default async function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <Certifications data={home.certifications} />
 
       {/* Why choose */}
       <section className="relative bg-navy py-24 md:py-32">

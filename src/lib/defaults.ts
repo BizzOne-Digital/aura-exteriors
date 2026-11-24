@@ -14,6 +14,9 @@ export const defaultSettings = {
   email: "kgraham@aura-exteriors.com",
   contactPerson: "Kevin Graham",
   address: "",
+  serviceArea: "Serving a 40-mile radius of Dalton, GA 30720",
+  serviceAreaZip: "30720",
+  serviceAreaMiles: "40",
   mapEmbedUrl: "",
   facebookUrl: "",
   instagramUrl: "",
@@ -88,6 +91,15 @@ export const defaultHome = {
       { title: "Clean, High Windows", text: "Professional high window cleaning for sparkling glass on every floor, without the risk.", image: "/ladder/high-windows.webp", link: "/services/exterior-improvements" },
     ],
   },
+  certifications: {
+    label: "Trained. Certified. Trusted.",
+    heading: "Certified Lighting Installer",
+    text: "Our team has completed manufacturer training and certification with our lighting suppliers.",
+    items: [
+      { title: "Blue Hopper Certified Installer", text: "Permanent Holiday Lighting Partner, powered by Meshtek.", image: "/badges/blue-hopper-certified-installer.webp" },
+      { title: "Strata Certified Installer", text: "Completed the full Strata installation training and certification program.", image: "/badges/strata-certified-installer.webp" },
+    ],
+  },
   occasions: {
     label: "Every Color. Every Occasion.",
     heading: "Lights for Every Holiday, Game Day, and Celebration.",
@@ -112,7 +124,7 @@ export const defaultHome = {
   },
   about: {
     label: "The Aura Difference",
-    heading: "Crafting Extraordinary Exteriors for Nearly Four Decades.",
+    heading: "Crafting Extraordinary Exteriors Across Four Decades.",
     body: COMPANY_DESCRIPTION,
     image: IMG.mansionDusk,
     button: "Discover Our Story",

@@ -20,6 +20,16 @@ export default async function WebsiteLayout({ children }: { children: React.Reac
     image: `${url}${IMG.heroDusk}`,
     telephone: settings.phone,
     email: settings.email,
+    description: settings.seoDescription,
+    ...(settings.serviceAreaZip && Number(settings.serviceAreaMiles) > 0
+      ? {
+          areaServed: {
+            "@type": "GeoCircle",
+            geoMidpoint: { "@type": "GeoCoordinates", postalCode: settings.serviceAreaZip, addressCountry: "US" },
+            geoRadius: Math.round(Number(settings.serviceAreaMiles) * 1609.344),
+          },
+        }
+      : {}),
     ...(settings.address ? { address: settings.address } : {}),
     makesOffer: services.map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s.title, url: `${url}/services/${s.slug}` } })),
   };
@@ -30,7 +40,7 @@ export default async function WebsiteLayout({ children }: { children: React.Reac
         Skip to content
       </a>
       <Header phone={settings.phone} logoUrl={settings.logoUrl} tagline={settings.tagline} services={nav} />
-      <main id="main">{children}</main>
+      <main id="main" className="overflow-x-clip">{children}</main>
       <Footer settings={settings} services={nav} suppliers={suppliers} />
     </MotionProvider>
   );

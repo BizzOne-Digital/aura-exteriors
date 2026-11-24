@@ -7,7 +7,11 @@ export function telHref(phone: string) {
 }
 
 export function siteUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
+  // On Vercel, fall back to the project's production domain so canonical URLs never point at localhost.
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  const configured = process.env.NEXT_PUBLIC_SITE_URL;
+  const usable = configured && !(vercel && configured.includes("localhost")) ? configured : "";
+  return (usable || (vercel ? `https://${vercel}` : "http://localhost:3000")).replace(/\/$/, "");
 }
 
 export function isSafeExternalUrl(url: string | undefined | null) {

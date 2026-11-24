@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Check, Compass, Gem, Hammer, Sparkles } from "lucide-react";
 import { PageHero, SectionHeading, ConsultationBand } from "@/components/shared/sections";
 import { Reveal, MaskReveal, Stagger, StaggerItem } from "@/components/shared/motion";
+import { Certifications } from "@/components/home/Certifications";
 import { getPage, getSettings } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const ICONS = [Compass, Gem, Hammer, Sparkles];
 
 export default async function AboutPage() {
-  const [about, settings] = await Promise.all([getPage("about"), getSettings()]);
+  const [about, settings, home] = await Promise.all([getPage("about"), getSettings(), getPage("home")]);
   return (
     <>
       <PageHero eyebrow={about.hero.label} title={about.hero.heading} image={about.hero.image} imageAlt="Grand residence illuminated at twilight">
@@ -78,6 +79,8 @@ export default async function AboutPage() {
           </Stagger>
         </div>
       </section>
+
+      <Certifications data={home.certifications} />
 
       {/* Reasons */}
       <section className="bg-night py-24 md:py-32">

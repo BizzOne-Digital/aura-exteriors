@@ -8,6 +8,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/shared/motion";
 import { GalleryGrid } from "@/components/shared/GalleryGrid";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { getFaqs, getGallery, getPage, getService, getServices, getSettings } from "@/lib/data";
+import { Certifications } from "@/components/home/Certifications";
 import { Occasions } from "@/components/home/Occasions";
 import { SERVICE_SLUGS } from "@/lib/defaults";
 import { siteUrl, telHref } from "@/lib/utils";
@@ -87,6 +88,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       </section>
 
       {slug === "roofline-lighting" && <Occasions data={home.occasions} />}
+      {slug === "roofline-lighting" && <Certifications data={home.certifications} />}
 
       {shownImages.length > 0 && (
         <section className="bg-midnight py-24">
