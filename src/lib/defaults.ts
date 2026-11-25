@@ -38,7 +38,7 @@ export const defaultFinancing = {
   heading: "Financing Available Through Hearth",
   text: "Explore flexible financing options for your exterior improvement project.",
   buttonLabel: "Learn More About Financing",
-  url: "",
+  url: "https://homeowner.gethearth.com/v1/organizations/67103/users/118183/financing?utm_source=user&utm_medium=user-public-link&utm_campaign=67103&utm_term=118183",
   calloutHeading: "Bring Your Vision to Life.",
   calloutText: "Explore financing options for your next exterior improvement.",
   calloutImage: IMG.villaPoolDusk,
